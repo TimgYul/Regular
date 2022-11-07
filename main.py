@@ -11,13 +11,13 @@ def split_name(element, i):
 
 def merge_list(contact_list):
     result = dict()
-    for elements in contact_list[1::]:
+    for elements in contact_list[1::]:        
         if elements[0] not in result:
            result[elements[0]] = elements
         else:
             lis = []
             lis = result[elements[0]]
-            for index in range(len(elements)):
+            for index in range(len(contact_list[0])):
                 if lis[index] == '':
                     lis[index] = elements[index]
     return result
